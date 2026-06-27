@@ -33,6 +33,11 @@
     transition:background .15s,color .15s}
   .langtoggle button[aria-pressed="true"]{background:#00e0a4;color:#06121a}
   .langtoggle button:focus-visible{outline:2px solid #00e0a4;outline-offset:2px}
+  /* --- preview screenshot inside a link-card --- */
+  .link-card.has-shot{flex-wrap:wrap}
+  .card-shot{flex-basis:100%;line-height:0;margin-top:12px;border-radius:8px;overflow:hidden;
+    border:1px solid rgba(255,255,255,.12)}
+  .card-shot img{width:100%;height:auto;display:block}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🛡️&lt;/text&gt;&lt;/svg&gt;">
@@ -95,10 +100,11 @@
       <span class="lc-text"><b>stingray-detector</b><em><span class="t-en">Passive IMSI-catcher / rogue-cell detection (SDR)</span><span class="t-es" lang="es">Detección pasiva de IMSI-catchers / celdas falsas (SDR)</span></em></span>
       <span class="arr">↗</span>
     </a>
-    <a class="link-card" href="https://github.com/crcctcpr/yaris-xp90-repair" target="_blank" rel="noopener">
+    <a class="link-card has-shot" href="https://github.com/crcctcpr/yaris-xp90-repair" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 13l2-5a2 2 0 012-1.5h10A2 2 0 0119 8l2 5M5 13h14v4a1 1 0 01-1 1h-1a1 1 0 01-1-1v-1H8v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-4z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></span>
       <span class="lc-text"><b>yaris-xp90-repair</b><em><span class="t-en">OBD-II / CAN-bus vehicle diagnostics toolkit</span><span class="t-es" lang="es">Kit de diagnóstico vehicular OBD-II / CAN-bus</span></em></span>
       <span class="arr">↗</span>
+      <span class="card-shot"><img src="webdash.png" alt="Yaris web dashboard — live gauges and fuel-trim / MAF charts from a sample drive log" loading="lazy" width="1920" height="953"></span>
     </a>
     <a class="link-card" href="https://linkedin.com/in/carloscabrera" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
