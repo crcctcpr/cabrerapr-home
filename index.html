@@ -20,6 +20,20 @@
 <meta name="twitter:image" content="https://cabrerapr.com/og.png">
 <meta name="theme-color" content="#0a0e14">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* --- i18n language toggle --- */
+  .t-es{display:none}
+  html[lang="es"] .t-en{display:none}
+  html[lang="es"] .t-es{display:inline}
+  .langtoggle{position:fixed;top:14px;right:14px;z-index:50;display:inline-flex;align-items:center;
+    border:1px solid rgba(255,255,255,.18);border-radius:999px;overflow:hidden;
+    background:rgba(10,14,20,.55);backdrop-filter:blur(6px)}
+  .langtoggle button{font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:#9aa4b2;
+    background:transparent;border:0;padding:.3rem .62rem;cursor:pointer;line-height:1;
+    transition:background .15s,color .15s}
+  .langtoggle button[aria-pressed="true"]{background:#00e0a4;color:#06121a}
+  .langtoggle button:focus-visible{outline:2px solid #00e0a4;outline-offset:2px}
+</style>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🛡️&lt;/text&gt;&lt;/svg&gt;">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -48,41 +62,47 @@
 <body>
 <div class="grid-bg" aria-hidden="true"></div>
 
+<div class="langtoggle" role="group" aria-label="Language / Idioma">
+  <button type="button" data-setlang="en" aria-pressed="true">EN</button>
+  <button type="button" data-setlang="es" aria-pressed="false">ES</button>
+</div>
+
 <main class="wrap">
   <header class="hero reveal">
     <img class="avatar" src="headshot.jpg" alt="Carlos Cabrera" width="148" height="148" loading="eager">
     <p class="kicker"><span class="blink">▌</span> whoami</p>
     <h1>Carlos&nbsp;Cabrera</h1>
     <p class="role" id="role">Information Security Specialist</p>
-    <p class="tagline">Cyber incident response, threat hunting, and security automation —
-      plus hands-on hardware, RF, and vehicle/IoT tinkering. Based in Puerto&nbsp;Rico · bilingual EN/ES.</p>
-    <p class="open-pill"><span class="pulse"></span> Open to opportunities</p>
+    <p class="tagline"><span class="t-en">Cyber incident response, threat hunting, and security automation —
+      plus hands-on hardware, RF, and vehicle/IoT tinkering. Based in Puerto&nbsp;Rico · bilingual EN/ES.</span><span class="t-es" lang="es">Respuesta a incidentes, caza de amenazas y automatización de seguridad —
+      además de hardware, RF y experimentación con vehículos/IoT. Radicado en Puerto&nbsp;Rico · bilingüe EN/ES.</span></p>
+    <p class="open-pill"><span class="pulse"></span> <span class="t-en">Open to opportunities</span><span class="t-es" lang="es">Abierto a oportunidades</span></p>
   </header>
 
   <nav class="links reveal" aria-label="Links">
     <a class="link-card primary" href="https://resume.cabrerapr.com" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l5 5v15a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h2"/></svg></span>
-      <span class="lc-text"><b>Résumé</b><em>Full interactive CV — experience, skills &amp; certs</em></span>
+      <span class="lc-text"><b><span class="t-en">Résumé</span><span class="t-es" lang="es">Currículum</span></b><em><span class="t-en">Full interactive CV — experience, skills &amp; certs</span><span class="t-es" lang="es">CV interactivo completo — experiencia, habilidades y certificaciones</span></em></span>
       <span class="arr">↗</span>
     </a>
     <a class="link-card" href="https://github.com/crcctcpr" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></span>
-      <span class="lc-text"><b>GitHub</b><em>Open-source security &amp; tooling — @crcctcpr</em></span>
+      <span class="lc-text"><b>GitHub</b><em><span class="t-en">Open-source security &amp; tooling — @crcctcpr</span><span class="t-es" lang="es">Seguridad y herramientas de código abierto — @crcctcpr</span></em></span>
       <span class="arr">↗</span>
     </a>
     <a class="link-card" href="https://github.com/crcctcpr/stingray-detector" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v6M12 22a6 6 0 006-6c0-3-2-5-6-9-4 4-6 6-6 9a6 6 0 006 6z"/></svg></span>
-      <span class="lc-text"><b>stingray-detector</b><em>Passive IMSI-catcher / rogue-cell detection (SDR)</em></span>
+      <span class="lc-text"><b>stingray-detector</b><em><span class="t-en">Passive IMSI-catcher / rogue-cell detection (SDR)</span><span class="t-es" lang="es">Detección pasiva de IMSI-catchers / celdas falsas (SDR)</span></em></span>
       <span class="arr">↗</span>
     </a>
     <a class="link-card" href="https://github.com/crcctcpr/yaris-xp90-repair" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 13l2-5a2 2 0 012-1.5h10A2 2 0 0119 8l2 5M5 13h14v4a1 1 0 01-1 1h-1a1 1 0 01-1-1v-1H8v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-4z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></span>
-      <span class="lc-text"><b>yaris-xp90-repair</b><em>OBD-II / CAN-bus vehicle diagnostics toolkit</em></span>
+      <span class="lc-text"><b>yaris-xp90-repair</b><em><span class="t-en">OBD-II / CAN-bus vehicle diagnostics toolkit</span><span class="t-es" lang="es">Kit de diagnóstico vehicular OBD-II / CAN-bus</span></em></span>
       <span class="arr">↗</span>
     </a>
     <a class="link-card" href="https://linkedin.com/in/carloscabrera" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
-      <span class="lc-text"><b>LinkedIn</b><em>Professional profile &amp; network</em></span>
+      <span class="lc-text"><b>LinkedIn</b><em><span class="t-en">Professional profile &amp; network</span><span class="t-es" lang="es">Perfil y red profesional</span></em></span>
       <span class="arr">↗</span>
     </a>
     <a class="link-card" href="https://youtube.com/@carloscabrera655" target="_blank" rel="noopener">
@@ -108,11 +128,32 @@
     var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
     els.forEach(function(el){io.observe(el);});
   } else { els.forEach(function(el){el.classList.add('in');}); }
-  // rotating role
+  // --- i18n: EN/ES language toggle ---
+  var ROLES = {
+    en: ['Information Security Specialist','Cyber Incident Response Specialist','Threat Hunter','Automation & Tooling'],
+    es: ['Especialista en Seguridad de la Información','Especialista en Respuesta a Incidentes','Caza de Amenazas','Automatización y Herramientas']
+  };
+  var lang = 'en';
+  try { lang = localStorage.getItem('lang') || ((navigator.language||'').toLowerCase().indexOf('es')===0 ? 'es' : 'en'); } catch(e){}
+
+  function setLang(l){
+    lang = (l === 'es') ? 'es' : 'en';
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('lang', lang); } catch(e){}
+    var btns = document.querySelectorAll('.langtoggle [data-setlang]');
+    for (var k=0;k<btns.length;k++){ btns[k].setAttribute('aria-pressed', btns[k].getAttribute('data-setlang')===lang ? 'true':'false'); }
+  }
+
+  var tbtns = document.querySelectorAll('.langtoggle [data-setlang]');
+  for (var b=0;b<tbtns.length;b++){ tbtns[b].addEventListener('click', function(){ setLang(this.getAttribute('data-setlang')); }); }
+  setLang(lang);
+
+  // rotating role (localized — reads current language each tick)
   var r=document.getElementById('role');
-  if(r){var roles=['Information Security Specialist','Cyber Incident Response Specialist','Threat Hunter','Automation & Tooling'],i=0;
+  if(r){var i=0;
+    r.textContent = ROLES[lang][0];
     r.style.transition='opacity .28s ease';
-    setInterval(function(){i=(i+1)%roles.length;r.style.opacity=0;setTimeout(function(){r.textContent=roles[i];r.style.opacity=1;},280);},3200);}
+    setInterval(function(){var list=ROLES[lang];i=(i+1)%list.length;r.style.opacity=0;setTimeout(function(){r.textContent=list[i];r.style.opacity=1;},280);},3200);}
 </script>
 </body>
 </html>
